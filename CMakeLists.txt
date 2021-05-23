@@ -10,4 +10,4 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -std=c++11 -fPIC")
 # 定义参与编译的源代码文件 
 aux_source_directory(. SRC_LIST)
 # 编译生成动态库mymuduo
-add_library(weMuduo SHARED ${SRC_LIST})
+add_library(weMuduo SHARED ${SRC_LIST} Poller.cpp Poller.h DefaultPoller.cpp EPollPoller.cpp EPollPoller.h CurrentThread.cpp CurrentThread.h)
